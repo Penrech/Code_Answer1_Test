@@ -12,7 +12,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:weightSum="1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="loginScreen.solution.example.com.loginScreen.MainActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/lt_buttons"
@@ -27,7 +27,8 @@
             android:layout_weight="1"
             android:allowUndo="false"
             android:autoText="false"
-            android:background="@color/white"
+            android:background="@color/buttoncolor"
+            android:onClick="flipView"
             android:text="Log In" />
 
         <Button
@@ -38,6 +39,7 @@
             android:layout_weight="1"
             android:allowUndo="false"
             android:background="@color/white"
+            android:onClick="flipView"
             android:text="Sign Up" />
     </LinearLayout>
 
@@ -52,9 +54,9 @@
         <EditText
             android:id="@+id/et_name"
             style="@style/EditText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:layout_width="match_parent" />
+            android:hint="Name" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,6 +101,7 @@
 
                 android:allowUndo="true"
                 android:background="#CC5ec639"
+                android:onClick="signIn"
                 android:text="Sign In" />
         </LinearLayout>
 
@@ -123,6 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:background="#CC5ec639"
+                android:onClick="validateSignUp"
                 android:text="Create Account" />
         </LinearLayout>
 
